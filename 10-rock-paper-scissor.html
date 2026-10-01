@@ -13,7 +13,47 @@
       .title{
         font-size: 30px;
         font-weight: bold;
-        
+
+
+      }
+
+      .move-icon{
+        height: 50px;
+      }
+
+      .move-button{
+        background-color: transparent;
+        /* border: none; */
+        border-radius: 60px;
+        border: 3px solid white;
+        width: 120px;
+        height:120px;
+        margin-right: 10px;
+        cursor: pointer;
+
+      }
+
+      .reset-button{
+        font-family: Arial;
+        font-size: 15px;
+        /* font-weight: bold; */
+      }
+      .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      .score{
+        margin-top: 60px;
+      }
+
+      .reset-score-button{
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -22,19 +62,23 @@
 
     <button onclick="
       playGame('Rock');
-    ">Rock</button>
+    " class="move-button"><img src="images/rock-emoji.png" class="move-icon"></button>
 
     <button onclick="
       playGame('Paper');
-    ">Paper</button>
+    " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
 
     <button onclick="
       playGame('Scissors');
-    ">Scissors</button>
+    " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
 
-    <p class="js-result"></p>
-    <p class="js-move"></p>
-    <p class="js-score"></p>
+    <p class="js-result result">You win.</p>
+    <p class="js-move">
+      You <img src="images/rock-emoji.png" class="move-icon">
+      <img src="images/scissors-emoji.png" class="move-icon">
+      computer
+    </p>
+    <p class="js-score score"></p>
 
     <button onclick="
       score.wins = 0;
@@ -42,7 +86,7 @@
       score.ties = 0;
       localStorage.removeItem('score');
       updateScoreElement();
-    ">Reset Score</button>
+      "class="reset-score-button">Reset Score</button>
 
     
 
