@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10Excersise</title>
+    <style>
+      /* the word toogles means turn on/off*/
+      .toggled-button{
+        background-color: rgb(230,230,230);
+        border: none;
+        padding: 10px 15px ;
+        border-radius: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled{
+        background-color: black;
+        color: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="Toggle()" class =" toggled-button js-button ">Gaming</button>
+
+    <button onclick="Toggle()" class="toggled-button js-button">Music</button>
+
+    <button onclick=" Toggle()" class="toggled-button js-button">Teach</button>
+
+
+    <script>
+      function Toggle(){
+
+        const buttonGaming = document.querySelector('.js-button');
+        if (!buttonGaming.classList.contains('is-toggled')){
+          buttonGaming.classList.add('is-toggled');
+        } else {
+          buttonGaming.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>
