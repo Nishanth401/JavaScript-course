@@ -1,0 +1,107 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+
+  
+   animation: floating 2s ease-in-out infinite;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+  
+}
+
+.title{
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 140px;
+  margin-right: 170px;
+  padding: 10px;
+
+  background-color: #212328;
+  color: #A3E635;
+  border-radius: 12px;
+}
+
+.todo-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.todo-grid,
+.todo-input-grid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+
+}
+.todo-input-grid{
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+
+.name-input,
+.due-date-input{
+  font-size: 15px;
+  padding: 6px;
+}
+
+.delete-button{
+  font-size: 15px;
+  padding: 6px;
+  color: white;
+  background-color: rgb(190, 6, 6);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  
+  transition: 0.3s ease;
+
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.delete-button:hover{
+  background-color: #0f0f0f ;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:active {
+   transform: translateY(1px) scale(0.98);
+}
+
+
+.add-button{
+  font-size: 15px;
+  background-color: rgb(2, 178, 2);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-button:hover{
+  background-color: #1d4ed8 ;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-button:active{
+   transform: translateY(1px) scale(0.98);
+}
