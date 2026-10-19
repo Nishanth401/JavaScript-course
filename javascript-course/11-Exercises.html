@@ -1,0 +1,33 @@
+?<!DOCTYPE html>
+<html>
+  <head>
+    <title>11 EXERCISES</title>
+  </head>
+  <body>
+
+
+    <script>
+
+    const arr = ['helo','hi','wow','search','search'];
+    let check = '';
+    function target(){
+      for(let i=0;i<arr.length;i++){
+       
+        if(arr[i]=== 'search'){
+          check = i;
+          return check;
+        
+        }
+        else{
+          check = '-1';
+        }
+      }
+
+      return check;
+
+    }
+
+    console.log(target())
+    </script>
+  </body>
+</html>
